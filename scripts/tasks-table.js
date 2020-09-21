@@ -5,7 +5,7 @@ getJsonFile(urlDataJson);/* Получить статус от сервера */
 
 function getStatus() {
     jQuery.ajax({
-        'url': 'status1.json',         //Страница, с которой мы запрашиваем данные
+        'url': 'status.json',         //Страница, с которой мы запрашиваем данные
         'dataType': 'json',        //Тип запроса
         'type': 'get'          //Способ передачи данных
     }).then(result => {
@@ -14,7 +14,7 @@ function getStatus() {
         } else if (result.status.toLowerCase() == 'error') {
             showStatus('Ошибка запроса');
         } else {
-
+            showStatus('Неопознанный ответ от сервера');
         }
     })
         .fail((response) => {
