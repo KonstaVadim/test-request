@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin row-table {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+
+.table {
+  width: calc(100vw - 20px);
+  margin: 10px;
+  font-size: 14px;
+
+  &-tabs {
+    @include row-table;
+    width: 100%;
+    background-color: wheat;
+
+    .tab {
+      @include flex-center;
+      padding: 5px 10px;
+
+      &:not(:last-child) {
+        box-shadow: 5px 0 0 -4px #a4a4a4;
+      }
+    }
+  }
+
+  &-content {
+    border: 1px solid wheat;
+
+    .row {
+      display: flex;
+      font-size: 14px;
+      @include row-table;
+
+      .tr {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 10px;
+
+        &:not(last-child) {
+          box-shadow: 1px 0 0 0 wheat;
+        }
+      }
+    }
+  }
+}
+
+
+.btn {
+  color: #fff;
+  text-decoration: none;
+  user-select: none;
+  background: rgb(212, 75, 56);
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 30px;
+
+  &:hover {
+    background: rgb(232, 95, 76);
+  }
+  &:active {
+    background: rgb(152,15,0);
+  }
+}
+
+#status-text {
+  margin-top: 10px;
+  margin-left: 30px;
+}

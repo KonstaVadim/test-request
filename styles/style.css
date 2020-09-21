@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+.table {
+  width: calc(100vw - 20px);
+  margin: 10px;
+  font-size: 14px;
+}
+.table-tabs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  background-color: wheat;
+}
+.table-tabs .tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+}
+.table-tabs .tab:not(:last-child) {
+  box-shadow: 5px 0 0 -4px #a4a4a4;
+}
+.table-content {
+  border: 1px solid wheat;
+}
+.table-content .row {
+  display: flex;
+  font-size: 14px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.table-content .row .tr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+}
+.table-content .row .tr:not(last-child) {
+  box-shadow: 1px 0 0 0 wheat;
+}
+
+.btn {
+  color: #fff;
+  text-decoration: none;
+  user-select: none;
+  background: #d44b38;
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.btn:hover {
+  background: #e85f4c;
+}
+.btn:active {
+  background: #980f00;
+}
+
+#status-text {
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */

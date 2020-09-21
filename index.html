@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks table</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<div class="app-table">
+    <!-- Котейнер с таблицо-->
+    <div class="table">
+        <!-- Вкладки таблицы-->
+        <div class="table-tabs">
+            <div class="tab">
+                <span>Тип датчик</span>
+            </div>
+            <div class="tab">
+                <span>Порядковый номер</span>
+            </div>
+            <div class="tab">
+                <span>Имя датчика</span>
+            </div>
+            <div class="tab">
+                <span>Температура</span>
+            </div>
+            <div class="tab">
+                <span>Влажность</span>
+            </div>
+        </div>
+        <!-- Контент таблицы -->
+        <div class="table-content" id="table-content">
+        </div>
+    </div>
+
+    <button class="btn" id="send">Отправить запрос</button>
+    <div id="status-text"></div>
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="scripts/tasks-table.js"></script>
+</body>
+</html>
